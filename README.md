@@ -1,29 +1,38 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/x9tT2GbG)
-# Projeto Final de PCS3335 - LabDigi A, 2023
+# SDSlideShow de PCS3335 - LabDigi A, 2023
 
 ## 1) Descrição
-1234567 - Bruno Albertini (gerente)
-2345678 - Fulano de Tal
-Nome curto: template
+11200803 - Henrique Hiroki Nakamura (gerente)
+11831901 - Lucas Rodrigues Giacone
+1078332 - Bruno Barreto Rangel 
+Nome curto: SD e VGA
 Endereço GIT: https://classroom.github.com/a/x9tT2GbG
 
-Personalize este README mudando o seguinte:  
-- Mude o título "Projeto Final etc" para o nome do seu projeto.
-- O nome curto deve ser uma ou duas palavras que identifiquem o seu projeto. Seu grupo no e-Disciplinas terá este nome.
-- Preencha as seções abaixo.
-- Substitua estas instruções por uma descrição breve do seu projeto.
+## 1) Descrição do projeto
+A proposta do projeto SdSlideShow é fazer uma releitura do antigo projetor de slides,
+por meio da leitura de um cartão de memória SD que conta as imagens que serão apresentadas
+em um dispositivo de imagem utilizando comunicação VGA através FPGA para realizar o
+processamento da imagem lida contando também com um controle para passar e retornar a
+imagem anterior. O projeto será registrado no GitHub no seguinte endereço:
 
 ## 2) Motivação
-Explique aqui o que o levou a escolher este projeto e por qual motivo você acha que é interessante implementá-lo com um sistema digital.
+Além de resgatar a ideia de apresentação instantânea fornecida pelo antigo aparelho de
+slides, a portabilidade e a possibilidade de exibir conteúdo digital para uma grande quantidade
+de pessoas, possibilita proporcionar entretenimento pessoal, apresentação de ideias e
+compartilhamento de informações e experiências, se mostrando um projeto de potencial
+relevante.
 
 ## 3) Revisão
-Inclua aqui uma rápida análise de projetos similares (comerciais ou não), concorrentes e qualquer outra informação prévia que pode ajudar você a guiar o seu projeto.
+Após uma breve pesquisa na internet notou-se que existem produtos capazes de
+realizar a leitura de um cartão SD e realizar a projeção de imagem, sendo a maioria deles
+mini projetores portáteis, entretanto nenhum deles apresenta a possibilidade de conectar-se a
+qualquer entrada VGA para poder transmitir a imagem lida no cartão de memória, sendo
+incompatíveis com a transmissão para telas, sendo um diferencial do nosso projeto para os
+produtos já existentes.
 
 ## 4) Arquitetura
-No mínimo deve ter um diagrama de blocos mostrando os elementos principais do projeto, todas as entradas e saídas planejadas.
+![image](https://github.com/PCS-Poli-USP/projeto-final-projeto-28/assets/135172171/d68b59d0-2540-4529-951c-c69e3e86079a)
 
 ## 5) Cronograma
-Você deve descrever exatamente o que pretende entregar nas duas entregas intermediárias, equivalentes às experiências 10 e 11. É necessário explicitar quais partes do projeto estarão em quais pontos de desenvolvimento e também como o professor deve verificar que você atingiu a meta.
-
-Observações: é possível usar o markdown aqui como documentação. Para a entrega no e-Disciplinas, você precisará gerar um PDF (há vários renderizadores que fazer isso). Se optar por isso, crie uma pasta relatório e deixe neste README os dados da seção 1.
+![image](https://github.com/PCS-Poli-USP/projeto-final-projeto-28/assets/135172171/b8169d21-d817-45db-81cc-649ebbdba8a3)
 
