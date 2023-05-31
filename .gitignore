@@ -1,0 +1,13 @@
+.DS_Store
+a.out
+*.o
+*.vcd
+*.ghw
+*.cf
+*.svf
+*/db/
+*/db/*
+*/incremental_db/
+*/output_files/
+*/simulation/
+*/simulation/questa/*
