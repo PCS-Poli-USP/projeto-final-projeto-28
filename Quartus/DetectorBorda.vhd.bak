@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity detector_borda is
+	generic (
+		subida : std_logic := '1'
+	);
+	port (
+      clk	: in std_logic;
+		rst	: in std_logic;
+		borda	: in std_logic;
+		update: out std_logic
+	);
+end sync;
+
+architecture rlt of sync is
+    type estados is (Waiting_Rise, Work, Waiting_Fall);
+    signal EA, PE : estados;
+begin
+	process(rst, clk)
+	begin
+	  if rst = '1' then
+			EA <= Waiting_Rise;
+	  elsif rising_edge(clk) then
+			EA <= PE;
+	  end if;
+	end process;
+
+	PE <= 
+		Waiting_Rise when EA = Waiting_Fall and update = '0' else
+		Work         when EA = Waiting_Rise and update = '1' else
+		Waiting_Fall when EA = Work else
+		PE;
+		
+	sync_update <= '1' when EA = Work else '0';
+		
+end architecture;
