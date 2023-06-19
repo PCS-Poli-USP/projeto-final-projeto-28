@@ -4,7 +4,7 @@
 ## 1) Descrição
 11200803 - Henrique Hiroki Nakamura (gerente)
 11831901 - Lucas Rodrigues Giacone
-1078332 - Bruno Barreto Rangel 
+10738332 - Bruno Barreto Rangel 
 Nome curto: SD e VGA
 Endereço GIT: https://classroom.github.com/a/x9tT2GbG
 
