@@ -1,0 +1,10 @@
+
+
+D:/LABDIG/PROJETO/Frame_buffer/ClockVGA.vhd
+
+Jun 20 01PM:06:03>: Error in CNX file format.
+
+Error messages are listed in file
+D:/LABDIG/PROJETO/Frame_buffer/ClockVGA.cnxerr.
+
+Can't create the custom megafunction variation file(s)

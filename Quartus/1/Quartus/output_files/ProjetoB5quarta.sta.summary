@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : -3.175
+TNS   : -90.745
+
+Type  : Slow 1100mV 85C Model Setup 'clks[0]'
+Slack : -2.610
+TNS   : -79.978
+
+Type  : Slow 1100mV 85C Model Setup 'clks[2]'
+Slack : -2.525
+TNS   : -2.525
+
+Type  : Slow 1100mV 85C Model Hold 'clks[0]'
+Slack : 0.423
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clks[2]'
+Slack : 0.645
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : 0.898
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : -0.538
+TNS   : -25.459
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clks[0]'
+Slack : -0.538
+TNS   : -24.196
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clks[2]'
+Slack : -0.538
+TNS   : -0.959
+
+Type  : Slow 1100mV 0C Model Setup 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : -3.224
+TNS   : -91.808
+
+Type  : Slow 1100mV 0C Model Setup 'clks[0]'
+Slack : -2.338
+TNS   : -69.645
+
+Type  : Slow 1100mV 0C Model Setup 'clks[2]'
+Slack : -2.338
+TNS   : -2.338
+
+Type  : Slow 1100mV 0C Model Hold 'clks[0]'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clks[2]'
+Slack : 0.535
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : 0.863
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : -0.538
+TNS   : -25.429
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clks[0]'
+Slack : -0.538
+TNS   : -24.887
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clks[2]'
+Slack : -0.538
+TNS   : -0.960
+
+Type  : Fast 1100mV 85C Model Setup 'clks[0]'
+Slack : -1.846
+TNS   : -40.778
+
+Type  : Fast 1100mV 85C Model Setup 'clks[2]'
+Slack : -1.751
+TNS   : -1.751
+
+Type  : Fast 1100mV 85C Model Setup 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : -1.298
+TNS   : -33.079
+
+Type  : Fast 1100mV 85C Model Hold 'clks[0]'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clks[2]'
+Slack : 0.665
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clks[2]'
+Slack : -0.389
+TNS   : -0.426
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clks[0]'
+Slack : -0.095
+TNS   : -2.832
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : 0.128
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clks[0]'
+Slack : -1.453
+TNS   : -29.138
+
+Type  : Fast 1100mV 0C Model Setup 'clks[2]'
+Slack : -1.405
+TNS   : -1.405
+
+Type  : Fast 1100mV 0C Model Setup 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : -1.130
+TNS   : -29.074
+
+Type  : Fast 1100mV 0C Model Hold 'clks[0]'
+Slack : 0.039
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clks[2]'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clks[2]'
+Slack : -0.374
+TNS   : -0.406
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clks[0]'
+Slack : -0.095
+TNS   : -2.851
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga_sync:vga_s|vga_clock_count[0]'
+Slack : 0.137
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Tue Jun 20 14:49:33 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : Frame_buffer
+Top-level Entity Name : Toplevel
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 244
+Total pins : 118
+Total virtual pins : 0
+Total block memory bits : 1,449,984
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

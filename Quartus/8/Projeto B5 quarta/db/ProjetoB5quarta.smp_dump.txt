@@ -1,0 +1,159 @@
+
+State Machine - |Toplevel|sdram_control:ram_ctrl|read_substate
+Name read_substate.PRECHARGE_NOP read_substate.PRECHARGE read_substate.NOP read_substate.READ read_substate.PRE_NOP 
+read_substate.PRE_NOP 0 0 0 0 0 
+read_substate.READ 0 0 0 1 1 
+read_substate.NOP 0 0 1 0 1 
+read_substate.PRECHARGE 0 1 0 0 1 
+read_substate.PRECHARGE_NOP 1 0 0 0 1 
+
+State Machine - |Toplevel|sdram_control:ram_ctrl|write_substate
+Name write_substate.PRECHARGE_NOP write_substate.PRECHARGE write_substate.NOP write_substate.WRITE write_substate.PRE_NOP 
+write_substate.PRE_NOP 0 0 0 0 0 
+write_substate.WRITE 0 0 0 1 1 
+write_substate.NOP 0 0 1 0 1 
+write_substate.PRECHARGE 0 1 0 0 1 
+write_substate.PRECHARGE_NOP 1 0 0 0 1 
+
+State Machine - |Toplevel|sdram_control:ram_ctrl|init_substate
+Name init_substate.LMR init_substate.A_REFRESH init_substate.PRECHARGE init_substate.NOP 
+init_substate.NOP 0 0 0 0 
+init_substate.PRECHARGE 0 0 1 1 
+init_substate.A_REFRESH 0 1 0 1 
+init_substate.LMR 1 0 0 1 
+
+State Machine - |Toplevel|sdram_control:ram_ctrl|estado
+Name estado.read estado.write estado.idle estado.init 
+estado.init 0 0 0 0 
+estado.idle 0 0 1 1 
+estado.write 0 1 0 1 
+estado.read 1 0 0 1 
+
+State Machine - |Toplevel|SD_dataflow:sd_df|sd_r_fifo_state
+Name sd_r_fifo_state.idle sd_r_fifo_state.reading2 sd_r_fifo_state.reading1 sd_r_fifo_state.init 
+sd_r_fifo_state.init 0 0 0 0 
+sd_r_fifo_state.reading1 0 0 1 1 
+sd_r_fifo_state.reading2 0 1 0 1 
+sd_r_fifo_state.idle 1 0 0 1 
+
+State Machine - |Toplevel|SD_dataflow:sd_df|sd_w_fifo_state
+Name sd_w_fifo_state.idle sd_w_fifo_state.filling2 sd_w_fifo_state.filling1 
+sd_w_fifo_state.filling1 0 0 0 
+sd_w_fifo_state.filling2 0 1 1 
+sd_w_fifo_state.idle 1 0 1 
+
+State Machine - |Toplevel|SD_dataflow:sd_df|block_reader_state
+Name block_reader_state.ask_blk block_reader_state.counting block_reader_state.idle 
+block_reader_state.idle 0 0 0 
+block_reader_state.counting 0 1 1 
+block_reader_state.ask_blk 1 0 1 
+
+State Machine - |Toplevel|SD_dataflow:sd_df|detector_borda:borda_read|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 
+
+State Machine - |Toplevel|SD_dataflow:sd_df|detector_borda:dec_busy|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 
+
+State Machine - |Toplevel|SD_dataflow:sd_df|detector_borda:dec_st_read|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 
+
+State Machine - |Toplevel|SD_dataflow:sd_df|SD_FIFO_16x1K:SD_FIFO_2|estado
+Name estado.dump2 estado.dump estado.byte2 estado.byte1 estado.espera2 estado.espera1 
+estado.espera1 0 0 0 0 0 0 
+estado.espera2 0 0 0 0 1 1 
+estado.byte1 0 0 0 1 0 1 
+estado.byte2 0 0 1 0 0 1 
+estado.dump 0 1 0 0 0 1 
+estado.dump2 1 0 0 0 0 1 
+
+State Machine - |Toplevel|SD_dataflow:sd_df|SD_FIFO_16x1K:SD_FIFO_1|estado
+Name estado.dump2 estado.dump estado.byte2 estado.byte1 estado.espera2 estado.espera1 
+estado.espera1 0 0 0 0 0 0 
+estado.espera2 0 0 0 0 1 1 
+estado.byte1 0 0 0 1 0 1 
+estado.byte2 0 0 1 0 0 1 
+estado.dump 0 1 0 0 0 1 
+estado.dump2 1 0 0 0 0 1 
+
+State Machine - |Toplevel|SD_dataflow:sd_df|SdCardCtrl:sd_cartao|rtnState_v
+Name rtnState_v.REPORT_ERROR rtnState_v.PULSE_SCLK rtnState_v.DESELECT rtnState_v.RX_BITS rtnState_v.GET_CMD_RESPONSE rtnState_v.TX_BITS rtnState_v.START_TX rtnState_v.WR_WAIT rtnState_v.WR_BLK rtnState_v.RD_BLK rtnState_v.WAIT_FOR_HOST_RW rtnState_v.CHK_ACMD41_RESPONSE rtnState_v.SEND_CMD41 rtnState_v.SEND_CMD55 rtnState_v.GET_CMD8_RESPONSE rtnState_v.SEND_CMD8 rtnState_v.CHK_CMD0_RESPONSE rtnState_v.SEND_CMD0 rtnState_v.START_INIT 
+rtnState_v.START_INIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+rtnState_v.SEND_CMD0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+rtnState_v.CHK_CMD0_RESPONSE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+rtnState_v.SEND_CMD8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+rtnState_v.GET_CMD8_RESPONSE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+rtnState_v.SEND_CMD55 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+rtnState_v.SEND_CMD41 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+rtnState_v.CHK_ACMD41_RESPONSE 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+rtnState_v.WAIT_FOR_HOST_RW 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+rtnState_v.RD_BLK 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+rtnState_v.WR_BLK 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+rtnState_v.WR_WAIT 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+rtnState_v.START_TX 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+rtnState_v.TX_BITS 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+rtnState_v.GET_CMD_RESPONSE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+rtnState_v.RX_BITS 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+rtnState_v.DESELECT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+rtnState_v.PULSE_SCLK 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+rtnState_v.REPORT_ERROR 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Toplevel|SD_dataflow:sd_df|SdCardCtrl:sd_cartao|state_v
+Name state_v.REPORT_ERROR state_v.PULSE_SCLK state_v.DESELECT state_v.RX_BITS state_v.GET_CMD_RESPONSE state_v.TX_BITS state_v.START_TX state_v.WR_WAIT state_v.WR_BLK state_v.RD_BLK state_v.WAIT_FOR_HOST_RW state_v.CHK_ACMD41_RESPONSE state_v.SEND_CMD41 state_v.SEND_CMD55 state_v.GET_CMD8_RESPONSE state_v.SEND_CMD8 state_v.CHK_CMD0_RESPONSE state_v.SEND_CMD0 state_v.START_INIT 
+state_v.START_INIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state_v.SEND_CMD0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state_v.CHK_CMD0_RESPONSE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state_v.SEND_CMD8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state_v.GET_CMD8_RESPONSE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state_v.SEND_CMD55 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state_v.SEND_CMD41 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state_v.CHK_ACMD41_RESPONSE 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state_v.WAIT_FOR_HOST_RW 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state_v.RD_BLK 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state_v.WR_BLK 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state_v.WR_WAIT 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state_v.START_TX 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state_v.TX_BITS 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state_v.GET_CMD_RESPONSE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state_v.RX_BITS 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state_v.DESELECT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state_v.PULSE_SCLK 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state_v.REPORT_ERROR 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Toplevel|detector_borda:\bordabotgen2:3:bordabot0|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 
+
+State Machine - |Toplevel|detector_borda:\bordabotgen2:2:bordabot0|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 
+
+State Machine - |Toplevel|detector_borda:\bordabotgen:1:bordabot0|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 
+
+State Machine - |Toplevel|detector_borda:\bordabotgen:0:bordabot0|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 
+
+State Machine - |Toplevel|detector_borda:borda_vs|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 

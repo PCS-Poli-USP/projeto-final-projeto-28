@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Jun 21 16:53:35 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : ProjetoB5quarta
+Top-level Entity Name : Toplevel
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 710
+Total pins : 166
+Total virtual pins : 0
+Total block memory bits : 81,920
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 2
+Total DLLs : 0

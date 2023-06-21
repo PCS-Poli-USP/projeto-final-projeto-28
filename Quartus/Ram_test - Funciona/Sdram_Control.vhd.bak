@@ -1,0 +1,153 @@
+library ieee;
+  use ieee.std_logic_1164.all;
+  use ieee.numeric_std.all;
+
+entity sdram_control is
+  port (
+
+	clk: in std_logic;
+	rst: in std_logic;
+
+	WR_DATA	: in std_logic_vector(15 downto 0);
+	RD_DATA	: in std_logic_vector(15 downto 0);
+	BUSY	: out std_logic;
+	WR		: in std_logic;
+	RD		: in std_logic;
+	ROW_ADDR: in std_logic_vector(14 downto 0); -- BANK + ROW 
+
+	--SDRAM
+	DRAM_DQ : inout std_logic_vector(15 downto 0);
+	DRAM_ADDR : out std_logic_vector(12 downto 0);
+	DRAM_BA : out std_logic_vector(1 downto 0);
+	DRAM_CLK : out std_logic;
+	DRAM_CKE : out std_logic;
+	DRAM_LDQM : out std_logic;
+	DRAM_UDQM : out std_logic;
+	DRAM_WE_N : out std_logic;
+	DRAM_CAS_N : out std_logic;
+	DRAM_RAS_N : out std_logic;
+	DRAM_CS_N : out std_logic
+	 
+  );
+end entity;
+
+
+architecture rtl of sdram_control is
+
+
+	constant H: std_logic := '1';
+	constant L: std_logic := '0';
+
+	constant OPERATING_MODE : std_logic_vector(12 downto 0) := "000"&'0'&"00"&"010"&'0'&"111";
+	
+
+
+	type cmd_state is (init, idle, rest);
+	signal estado: cmd_state := init;
+
+	type init_substates is (NOP, PRECHARGE, A_REFRESH, LMR);
+	signal init_substate: init_substates := NOP;
+	signal init_count: unsigned(2 downto 0) := (others => L);
+	signal init_refresh_count : unsigned(2 downto 0) := (others => L);
+	signal init_precharged: std_logic := L;
+	signal init_mode_registered: std_logic := L;
+	--NOP PRECHARGE 8x(AUTO_REFRESH 8xNOP) LMR NOP (READY)
+
+--                         CKE  n–1  n  CS  RAS CAS WE  BA1 BA0 A10 A9-A0
+-- Device deselect (DESL) 		 H 	 × 	 H 	 × 	 × 	 × 	 × 	 × 	 × 	 ×
+-- No operation (NOP)	 		 H 	 × 	 L 	 H 	 H 	 H	 × 	 ×	 ×	 ×
+-- Burst stop (BST) 	 		 H 	 × 	 L 	 H 	 H 	 L 	 × 	 × 	 × 	 ×
+-- Read 	 	 	 			 H 	 × 	 L 	 H 	 L 	 H	 V 	 V 	 L 	 V	
+-- Read with auto precharge 	 H 	 × 	 L 	 H 	 L 	 H 	 V 	 V 	 H	 V	
+-- Write 	 	 			 	 H 	 × 	 L	 H	 L 	 L 	 V 	 V	 L	 V
+-- Write with auto precharge 	 H	 ×	 L 	 H	 L	 L 	 V 	 V	 H 	 V
+-- Bank activate (ACT) 			 H 	 ×	 L	 L 	 H	 H 	 V	 V 	 V 	 V
+-- Precharge select bank (PRE)	 H 	 × 	 L	 L 	 H 	 L 	 V 	 V	 L 	 ×
+-- Precharge all banks (PALL)	 H 	 × 	 L	 L	 H	 L	 × 	 ×	 H	 ×
+-- CBR Auto-Refresh (REF)		 H 	 H 	 L	 L	 L	 H	 × 	 ×	 ×	 ×
+-- Self-Refresh (SELF)	 		 H 	 L 	 L	 L	 L	 H	 × 	 ×	 ×	 ×
+-- Mode register set (MRS) 		 H	 × 	 L 	 L 	 L 	 L 	 L 	 L 	 L	 V
+
+
+
+begin
+
+	cmd_proc: process (clk) is
+	begin
+		if rising_edge(clk) then
+			case estado is
+				when init =>
+					case init_substate is
+						when NOP =>
+
+							DRAM_CKE <= H;
+							DRAM_CS_N <= L;
+							DRAM_RAS_N <= H;
+							DRAM_CAS_N <= H;
+							DRAM_WE_N  <= H;
+							init_count <= init_count + 1;
+							
+							if init_count = "111" then
+								if init_mode_registered <= H then
+									estado <= idle;
+								elsif init_precharged = L then
+									init_substate <= PRECHARGE;
+								elsif init_refresh_count = "000" then -- 000 MEANS 8 ITERATIONS
+									init_substate <= LMR;
+								end if;
+							end if;
+						when PRECHARGE =>
+							init_precharged <= H;
+
+							DRAM_CKE <= H;
+							DRAM_CS_N <= L;
+							DRAM_RAS_N <= L;
+							DRAM_CAS_N <= H;
+							DRAM_WE_N  <= L;
+							DRAM_ADDR(10) <= H;
+
+							init_substate <= A_REFRESH;
+
+						when A_REFRESH =>
+
+							DRAM_CKE <= H;
+							DRAM_CS_N <= L;
+							DRAM_RAS_N <= L;
+							DRAM_CAS_N <= L;
+							DRAM_WE_N  <= H;
+
+							init_substate <= NOP;
+							init_refresh_count <= init_refresh_count + 1;
+
+						when LMR =>
+
+							DRAM_CKE <= H;
+							DRAM_CS_N <= L;
+							DRAM_RAS_N <= L;
+							DRAM_CAS_N <= L;
+							DRAM_WE_N  <= L;
+							DRAM_BA(1) <= L;
+							DRAM_BA(0) <= L;
+							DRAM_ADDR <= OPERATING_MODE; -- ADDR 10 IS LOW!
+							init_substate <= NOP;
+							init_mode_registered <= H;
+
+
+					end case;
+				when idle =>
+				when rest =>
+			end case;
+		end if;
+	end process;
+
+
+	busy_p: process (clk) is
+	begin
+		if estado = idle then
+			BUSY <= L;
+		else
+			BUSY <= H;
+		end if;		
+	end process;
+
+end architecture;

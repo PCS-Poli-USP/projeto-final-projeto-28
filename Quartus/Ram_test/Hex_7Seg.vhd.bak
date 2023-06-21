@@ -1,0 +1,37 @@
+--------------------------------------------------------------
+-- fpgagate.com: FPGA Projects, VHDL Tutorials, VHDL projects 
+-- VHDL seven segment decoder
+--------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity HEX2Seg is
+	Port (
+		hex : in STD_LOGIC_VECTOR (3 downto 0);
+		seg : out STD_LOGIC_VECTOR (7 downto 0)
+	);
+end HEX2Seg;
+
+architecture Behavioral of HEX2Seg is
+
+begin
+seg(6 downto 0) <=
+        --  gfedcba 
+           "10000001" when HEX="0000" else--0
+           "10011111" when HEX="0001" else--1
+           "01001001" when HEX="0010" else--2
+           "01100001" when HEX="0011" else--3
+           "00110011" when HEX="0100" else--4
+           "00100101" when HEX="0101" else--5
+           "00000101" when HEX="0110" else--6
+           "11110001" when HEX="0111" else--7
+           "00000001" when HEX="1000" else--8
+           "00100001" when HEX="1001" else--9
+           "00010001" when HEX="1010" else--A
+           "00000111" when HEX="1011" else--b
+           "10001101" when HEX="1100" else--C
+           "01000011" when HEX="1101" else--d
+           "00001101" when HEX="1110" else--E
+           "00011101" when HEX="1111" else--F
+           "00000000";       
+end Behavioral;

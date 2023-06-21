@@ -1,0 +1,42 @@
+
+State Machine - |Toplevel|detector_borda:\borda_bot:1:BOTi|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 
+
+State Machine - |Toplevel|detector_borda:\borda_bot:0:BOTi|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 
+
+State Machine - |Toplevel|sdram_control:ram_ctrl|read_substate
+Name read_substate.PRECHARGE_NOP read_substate.PRECHARGE read_substate.NOP read_substate.READ read_substate.PRE_NOP 
+read_substate.PRE_NOP 0 0 0 0 0 
+read_substate.READ 0 0 0 1 1 
+read_substate.NOP 0 0 1 0 1 
+read_substate.PRECHARGE 0 1 0 0 1 
+read_substate.PRECHARGE_NOP 1 0 0 0 1 
+
+State Machine - |Toplevel|sdram_control:ram_ctrl|write_substate
+Name write_substate.PRECHARGE_NOP write_substate.PRECHARGE write_substate.NOP write_substate.WRITE write_substate.PRE_NOP 
+write_substate.PRE_NOP 0 0 0 0 0 
+write_substate.WRITE 0 0 0 1 1 
+write_substate.NOP 0 0 1 0 1 
+write_substate.PRECHARGE 0 1 0 0 1 
+write_substate.PRECHARGE_NOP 1 0 0 0 1 
+
+State Machine - |Toplevel|sdram_control:ram_ctrl|init_substate
+Name init_substate.LMR init_substate.A_REFRESH init_substate.PRECHARGE init_substate.NOP 
+init_substate.NOP 0 0 0 0 
+init_substate.PRECHARGE 0 0 1 1 
+init_substate.A_REFRESH 0 1 0 1 
+init_substate.LMR 1 0 0 1 
+
+State Machine - |Toplevel|sdram_control:ram_ctrl|estado
+Name estado.read estado.write estado.idle estado.init 
+estado.init 0 0 0 0 
+estado.idle 0 0 1 1 
+estado.write 0 1 0 1 
+estado.read 1 0 0 1 

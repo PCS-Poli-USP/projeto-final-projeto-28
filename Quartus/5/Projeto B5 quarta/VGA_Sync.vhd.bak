@@ -1,0 +1,8 @@
+entity vga_sync is
+port(
+	clk : in std_logic;
+	H_sync: out std_logic;
+	V_sync: out std_logic;
+	ColorBurst :out std_logic
+);
+end entity;

@@ -1,0 +1,41 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'ram_clk'
+Slack : -1.879
+TNS   : -71.905
+
+Type  : Slow 1200mV 85C Model Hold 'ram_clk'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ram_clk'
+Slack : -3.000
+TNS   : -137.688
+
+Type  : Slow 1200mV 0C Model Setup 'ram_clk'
+Slack : -1.608
+TNS   : -59.823
+
+Type  : Slow 1200mV 0C Model Hold 'ram_clk'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ram_clk'
+Slack : -3.000
+TNS   : -137.688
+
+Type  : Fast 1200mV 0C Model Setup 'ram_clk'
+Slack : -0.408
+TNS   : -3.533
+
+Type  : Fast 1200mV 0C Model Hold 'ram_clk'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ram_clk'
+Slack : -3.000
+TNS   : -104.126
+
+------------------------------------------------------------

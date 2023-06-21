@@ -1,0 +1,253 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LEDs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[9]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_H",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_V",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SD_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[4]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[6]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[7]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[8]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[9]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[10]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[11]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[19]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[20]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[21]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[22]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[23]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[24]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[25]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[26]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[27]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[28]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[29]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[30]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[31]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[32]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[33]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[34]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[35]",
+					"strict" : false
+				},
+				{
+					"name" : "SD_CMD",
+					"strict" : false
+				},
+				{
+					"name" : "SD_DAT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SD_DAT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clks[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clks[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYs[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

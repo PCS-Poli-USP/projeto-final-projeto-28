@@ -1,0 +1,12 @@
+
+State Machine - |Toplevel|detector_borda:borda_h|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 
+
+State Machine - |Toplevel|vga_sync:vga_s|detector_borda:fim_linha|EA
+Name EA.Waiting_Fall EA.Work EA.Waiting_Rise 
+EA.Waiting_Rise 0 0 0 
+EA.Work 0 1 1 
+EA.Waiting_Fall 1 0 1 

@@ -1,0 +1,297 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[0][0]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[0][1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[0][2]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[0][3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[0][4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[0][5]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[0][6]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[1][0]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[1][1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[1][2]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[1][3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[1][4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[1][5]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[1][6]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[2][0]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[2][1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[2][2]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[2][3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[2][4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[2][5]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[2][6]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[3][0]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[3][1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[3][2]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[3][3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[3][4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[3][5]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG7[3][6]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_WE_N",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_CAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_RAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

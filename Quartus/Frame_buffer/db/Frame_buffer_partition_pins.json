@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hex0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[9]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_H",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_V",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "KEY0",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

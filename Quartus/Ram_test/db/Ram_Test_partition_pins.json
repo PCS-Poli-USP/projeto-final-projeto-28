@@ -1,0 +1,261 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "BUSY",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[8]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[9]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[10]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[11]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[12]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[13]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[14]",
+					"strict" : false
+				},
+				{
+					"name" : "READ_WD[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RDREQ",
+					"strict" : false
+				},
+				{
+					"name" : "WRREQ",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_WE_N",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_CAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_RAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ram_clk",
+					"strict" : false
+				},
+				{
+					"name" : "START_WR",
+					"strict" : false
+				},
+				{
+					"name" : "START_RD",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[8]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[9]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[10]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[11]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[12]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[13]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[14]",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE_WD[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

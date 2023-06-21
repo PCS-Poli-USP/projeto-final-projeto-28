@@ -1,0 +1,26 @@
+library ieee;
+  use ieee.std_logic_1164.all;
+  use ieee.numeric_std.all;
+
+entity Toplevel is
+  port (
+    clk : in std_logic;
+    LED : out std_logic_vector(9 downto 0)
+  );
+end entity;
+
+architecture rtl of Toplevel is
+
+signal count: unsigned(23 downto 0) := (others => '0');
+
+begin
+
+    pisca_led: process (clk) is
+    begin
+        if rising_edge(clk) then
+            count <= count + 1;
+        end if;
+    end process;
+
+    LED(0) <= count(23);
+end architecture;

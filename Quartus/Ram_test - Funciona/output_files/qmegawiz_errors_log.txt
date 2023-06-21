@@ -1,0 +1,10 @@
+
+
+D:/LABDIG/PROJETO/Ram_test - Funciona/RAM_PLL.vhd
+
+Jun 20 09AM:40:14>: Error in CNX file format.
+
+Error messages are listed in file
+D:/LABDIG/PROJETO/Ram_test - Funciona/RAM_PLL.cnxerr.
+
+Can't create the custom megafunction variation file(s)

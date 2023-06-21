@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="RAM_CLOCK_sim/RAM_CLOCK.vho" type="VHDL" />
+ <topLevel name="RAM_CLOCK" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

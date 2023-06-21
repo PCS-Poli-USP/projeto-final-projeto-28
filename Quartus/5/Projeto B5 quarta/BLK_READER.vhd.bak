@@ -1,0 +1,65 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity BLK_READER is
+	port (
+	clk	: in  std_logic;
+	START	: in  std_logic;
+	inc	: in 	std_logic;
+
+ );
+end BLK_READER;
+
+architecture rtl of BLK_READER is
+
+	
+	component detector_borda is
+		generic (
+			subida : boolean := true
+		);
+		port (
+			clk	: in std_logic;
+			rst	: in std_logic;
+			borda	: in std_logic;
+			update: out std_logic
+		);
+	component detector_borda;
+
+
+	signal count : unsigned(4 downto 0);
+	
+	type estados is (espera_inicio, espera_fim);
+	signal estado: estados := espera1;
+	
+	signal up_cnt: std_logic;
+begin
+
+	dec_inc: detector_borda
+		generic map (
+			subida => false
+		);
+		port (
+			clk	=> clk,
+			rst	=> '1',
+			borda	=> inc,
+			update=> up_cnt
+		);
+	component detector_borda;
+
+
+
+	process(clk) is
+	begin
+		if rising_edge(clk) then
+			case estado is
+				when espera_inicio =>
+					if START = '1' then
+						estado <= espera_fim;
+					end if;
+				when espera_fim =>
+			end case;
+		end if;
+	end process;
+
+end architecture;
