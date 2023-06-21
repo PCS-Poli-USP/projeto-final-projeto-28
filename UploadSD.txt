@@ -1,0 +1,16 @@
+Para carregar a imagem no cartão SD foi utilizado o linux.
+
+para realizar esse procedimento o usuario precisa:
+
+digitar o comando: " lsblk "
+
+identificar o dispositivo onde ele deseja gravar a imagem
+
+ddigitar o comando: " sudo ff if=(nome do arquivo a ser subido) of=/dev/(o dispositivo em que sera carregado o arquivo)
+
+ATENÇÃO: o cartão não pode estar formatado. Ele deve estar no formato RAW
+
+sintetizando:
+
+lsblk
+sudo ff if=(nome do arquivo a ser subido) of=/dev/(o dispositivo em que sera carregado o arquivo)
